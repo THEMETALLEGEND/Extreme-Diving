@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+	public int damage = 10; // Урон, наносимый пулей
+
 	public float lifeTime = 2f;
-	public string[] destroyOnCollisionTags = { "Enemy", "Obstacle" };
 
 	private void Start()
 	{
@@ -11,16 +12,17 @@ public class Bullet : MonoBehaviour
 		Destroy(gameObject, lifeTime);
 	}
 
-	private void OnTriggerEnter2D(Collider2D collision)
+	private void OnCollisionEnter2D(Collision2D coll)
 	{
-		// Проверяем столкновение с тегами, по которым должна быть уничтожена пуля
-		foreach (string tag in destroyOnCollisionTags)
+		if (coll.gameObject.CompareTag("Enemy")) // Проверяем, является ли объект врагом
 		{
-			if (collision.CompareTag(tag))
+			FishHealth fishHealth = coll.gameObject.GetComponent<FishHealth>(); // Получаем компонент HealthSystem с объекта врага
+			if (fishHealth != null)
 			{
-				Destroy(gameObject);
-				break;
+				fishHealth.TakeDamage(damage); // Вызываем метод TakeDamage для нанесения урона объекту врага
 			}
 		}
+
+		Destroy(gameObject); // Уничтожаем пулю после столкновения
 	}
 }

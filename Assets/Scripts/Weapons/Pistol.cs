@@ -21,7 +21,6 @@ public class Pistol : MonoBehaviour
 	{
 		if (Input.GetButtonDown("Fire1") && !isReloading && shotsRemaining > 0)
 		{
-			Debug.Log("pressing lmb");
 			Shoot();
 		}
 

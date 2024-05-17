@@ -7,10 +7,10 @@ public class PlayerMovement : MonoBehaviour
 	public float swimSpeed = 7f;  // Пульсационное значение скорости
 	public float interpolationAmount = .1f;
 
-	private Rigidbody2D rb;
+	public Rigidbody2D rb;
 	private Vector2 moveInput;
-	private Vector2 currentVelocity;
-	private Vector2 targetVelocity;
+	public Vector2 currentVelocity;
+	public Vector2 targetVelocity;
 
 	private void Start()
 	{

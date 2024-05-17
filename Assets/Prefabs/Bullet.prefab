@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5144171708281652620}
   - component: {fileID: 5978722005252894597}
   - component: {fileID: 2512938458297377967}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,9 +121,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 2
-  destroyOnCollisionTags:
-  - Enemy
-  - Obstacle
 --- !u!58 &2512938458297377967
 CircleCollider2D:
   m_ObjectHideFlags: 0
