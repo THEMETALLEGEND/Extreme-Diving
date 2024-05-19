@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerInventory : MonoBehaviour
 {
@@ -18,7 +19,20 @@ public class PlayerInventory : MonoBehaviour
 	public GameObject swordFishPrefab;
 	public GameObject sharkPrefab;
 
+	private int smallestFishCost = 1;
+	private int smallFishCost = 5;
+	private int normalFishCost = 25;
+	private int bigFishCost = 50;
+	private int swordFishCost = 10;
+	private int sharkCost = 100;
+
+	public TextMeshProUGUI fishCountText;
+	public TextMeshProUGUI moneyCountText;
+
 	private static PlayerInventory instance;
+
+	[HideInInspector] public int fishCount;
+	[HideInInspector] public int moneyCount;
 
 	private void Awake()
 	{
@@ -30,6 +44,36 @@ public class PlayerInventory : MonoBehaviour
 
 		instance = this;
 		DontDestroyOnLoad(gameObject);
+		UpdateInventory();
+	}
+
+	public void UpdateInventory()
+	{
+		// ќбновл€ем fishCount перед обновлением текста
+		fishCount = smallestFishCost * smallestFishAvailable
+			+ smallFishCost * smallFishAvailable
+			+ normalFishCost * normalFishAvailable
+			+ bigFishCost * bigFishAvailable
+			+ swordFishCost * swordFishAvailable
+			+ sharkCost * sharkAvailable;
+
+		fishCountText.text = fishCount.ToString() + "$";
+	}
+
+	public void SellFish()
+	{
+		// ѕрисваиваем moneyCount текущий fishCount и обновл€ем текст
+		moneyCount += fishCount;
+		moneyCountText.text = moneyCount.ToString() + "$";
+
+		smallestFishAvailable = 0;
+		smallFishAvailable = 0;
+		normalFishAvailable = 0;
+		bigFishAvailable = 0;
+		swordFishAvailable = 0;
+		sharkAvailable = 0;
+
+		UpdateInventory();
 	}
 
 	public static PlayerInventory Instance

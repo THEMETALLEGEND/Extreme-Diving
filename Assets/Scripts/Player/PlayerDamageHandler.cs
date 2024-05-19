@@ -4,8 +4,10 @@ using UnityEngine;
 public class PlayerDamageHandler : MonoBehaviour
 {
 	public float bounceForce = 10f; // Сила отскока игрока
-	public float bounceDuration = 0.8f; // Длительность отскока
+	public float targetBounceDuration = 0.8f; // Длительность отскока
 	public float scatterForce = 5f; // Сила, с которой рыба разбрасывается вокруг
+
+	public bool isDead = false;
 
 	private Rigidbody2D rb;
 	private PlayerMovement movementScript;
@@ -22,32 +24,50 @@ public class PlayerDamageHandler : MonoBehaviour
 	{
 		if (collision.gameObject.CompareTag("Enemy"))
 		{
-			// Получаем направление отскока
-			Vector2 bounceDirection = transform.position - collision.transform.position;
-			bounceDirection.Normalize();
-
-			// Применяем силу отскока к Rigidbody2D игрока
-			rb.AddForce(bounceDirection * bounceForce, ForceMode2D.Impulse);
-
-			// Отключаем скрипт передвижения игрока
-			movementScript.enabled = false;
-
-			// Запускаем корутину для замедления игрока и повторного включения скрипта через некоторое время
-			StartCoroutine(SlowDownAndEnableMovement());
-
-			// Разбрасываем рыбу из инвентаря
-			ScatterFish();
+			if (IsInventoryEmpty())
+			{
+				isDead = true;
+				ReceiveDamage(collision.gameObject, true);
+			}
+			else
+			{
+				ReceiveDamage(collision.gameObject, false);
+				ScatterFish();
+			}
 		}
 	}
 
-	IEnumerator SlowDownAndEnableMovement()
+	void ReceiveDamage(GameObject col, bool isDead)
+	{
+		// Получаем направление отскока
+		Vector2 bounceDirection = transform.position - col.transform.position;
+		bounceDirection.Normalize();
+
+		// Применяем силу отскока к Rigidbody2D игрока
+		rb.AddForce(bounceDirection * bounceForce, ForceMode2D.Impulse);
+
+		// Отключаем скрипт передвижения игрока
+		movementScript.enabled = false;
+
+		if (!isDead)
+			StartCoroutine(SlowDownAndEnableMovement(false));
+		else
+		{
+			StartCoroutine(SlowDownAndEnableMovement(true));
+			Die();
+		}
+
+	}
+
+	IEnumerator SlowDownAndEnableMovement(bool isDead)
 	{
 		float elapsedTime = 0f;
 		Vector2 initialVelocity = rb.velocity;
+		float currentBounceDuration = isDead ? targetBounceDuration + .5f : targetBounceDuration;
 
-		while (elapsedTime < bounceDuration)
+		while (elapsedTime < currentBounceDuration)
 		{
-			float t = elapsedTime / bounceDuration;
+			float t = elapsedTime / currentBounceDuration;
 			rb.velocity = Vector2.Lerp(initialVelocity, Vector2.zero, t);
 			elapsedTime += Time.deltaTime;
 			yield return null;
@@ -56,7 +76,10 @@ public class PlayerDamageHandler : MonoBehaviour
 		rb.velocity = Vector2.zero;
 		movementScript.currentVelocity = Vector2.zero;
 		movementScript.targetVelocity = Vector2.zero;
-		movementScript.enabled = true;
+
+		if (!isDead)
+			movementScript.enabled = true;
+
 	}
 
 	void ScatterFish()
@@ -86,9 +109,30 @@ public class PlayerDamageHandler : MonoBehaviour
 			Rigidbody2D fishRb = fish.GetComponent<Rigidbody2D>();
 			if (fishRb != null)
 			{
+				float scatterRandomForce = Random.Range(-4, 4);
 				Vector2 scatterDirection = Random.insideUnitCircle.normalized;
-				fishRb.AddForce(scatterDirection * scatterForce, ForceMode2D.Impulse);
+				fishRb.AddForce(scatterDirection * (scatterForce + scatterRandomForce), ForceMode2D.Impulse);
 			}
 		}
+
+		inventory.UpdateInventory();
+	}
+
+	bool IsInventoryEmpty()
+	{
+		return inventory.smallestFishAvailable == 0 &&
+			   inventory.smallFishAvailable == 0 &&
+			   inventory.normalFishAvailable == 0 &&
+			   inventory.bigFishAvailable == 0 &&
+			   inventory.swordFishAvailable == 0 &&
+			   inventory.sharkAvailable == 0;
+	}
+
+	void Die()
+	{
+		// Здесь вы можете добавить логику для смерти игрока, например, проигрывание анимации смерти, перезапуск уровня и т.д.
+		Debug.Log("Player has died.");
+		// Пример перезапуска уровня:
+		// UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
 	}
 }

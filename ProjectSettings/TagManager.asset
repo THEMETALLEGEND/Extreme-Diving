@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Obstacle
   - Hazard
+  - Trigger
   layers:
   - Default
   - TransparentFX

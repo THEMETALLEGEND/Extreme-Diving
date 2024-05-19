@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4582368322167373651}
   - component: {fileID: 4582368322167373648}
   m_Layer: 7
-  m_Name: SmallestFish
+  m_Name: SmallestFish1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e3a70579115f450ebd8587ade5479a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
+  maxHealth: 1
   corpsePrefab: {fileID: 8077559197582215091, guid: 480f24456ef6b4d48b5c27ec0309e011, type: 3}
 --- !u!1 &4582368322259702074
 GameObject:

@@ -24,8 +24,8 @@ public class FishCorpseLogic : MonoBehaviour
 	private GameObject model;
 
 	public float colliderEnableDelay = .5f;
-	public float standartDestoyTimer = 5f;
-	public float scatterDestroyTimer = 2f;
+	public float standartDestoyTimer = 4f;
+	public float scatterDestroyTimer = 3f;
 
 	private void Awake()
 	{
@@ -143,6 +143,8 @@ public class FishCorpseLogic : MonoBehaviour
 					Debug.LogWarning("Unhandled fish type: " + fishType);
 					break;
 			}
+
+			playerInventory.UpdateInventory();
 
 			// ”ничтожаем рыбу после того, как она добавлена в инвентарь игрока
 			Destroy(gameObject);
