@@ -9,15 +9,86 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Event Name="Play_Music" ID="{A181E44A-67F3-49B4-BF3C-FC5ABE4DEE66}"/>
-						<Event Name="Stop_Music" ID="{9A170B84-4F71-49F9-847C-70EC1CCF767E}"/>
-						<Event Name="Music_Gameplay" ID="{DC42921B-45BA-4EAE-8070-C84E9C3E56C7}"/>
-						<Event Name="Music_Menu" ID="{60E273F4-43A4-4447-A0B3-C3EB0EDAE9AF}"/>
+						<Event Name="Play_Music" ID="{A181E44A-67F3-49B4-BF3C-FC5ABE4DEE66}">
+							<ChildrenList>
+								<Action Name="" ID="{93D063BB-93A7-4706-9A8E-29E8C7B829ED}" ShortID="710110126">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Extreme Diving Music" ID="{CE94156A-215E-4501-8B81-AFED25BBD885}" WorkUnitID="{887AD0A7-125C-4D3D-B530-2BEC16C7230D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Music" ID="{9A170B84-4F71-49F9-847C-70EC1CCF767E}">
+							<ChildrenList>
+								<Action Name="" ID="{BA9CF3D9-66EF-47CC-8277-1EF52C61C4A8}" ShortID="60904673">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Extreme Diving Music" ID="{CE94156A-215E-4501-8B81-AFED25BBD885}" WorkUnitID="{887AD0A7-125C-4D3D-B530-2BEC16C7230D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Music_Gameplay" ID="{DC42921B-45BA-4EAE-8070-C84E9C3E56C7}">
+							<ChildrenList>
+								<Action Name="" ID="{BBA72FCC-26D6-4B5F-82FD-EC42F2781541}" ShortID="937309281">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Gameplay" ID="{C2E44A0D-6017-4511-83F7-B0FB7E9C3198}" WorkUnitID="{C48FCEAF-1357-4537-B244-BCC567D9496B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Music_Town" ID="{60E273F4-43A4-4447-A0B3-C3EB0EDAE9AF}">
+							<ChildrenList>
+								<Action Name="" ID="{80DA0CEC-9276-4C14-AC97-F60140A70A5A}" ShortID="577089171">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Menu" ID="{0A66E732-5BC1-44B7-A361-DC58722A1560}" WorkUnitID="{C48FCEAF-1357-4537-B244-BCC567D9496B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
-				<Event Name="Pause_All" ID="{4FC19CA9-0D6A-46D1-B75E-929600DD27ED}"/>
-				<Event Name="Resume_All" ID="{6AEC6D4A-624A-49B2-8C44-B691159E20FD}"/>
+				<Event Name="Pause_All" ID="{4FC19CA9-0D6A-46D1-B75E-929600DD27ED}">
+					<ChildrenList>
+						<Action Name="" ID="{E35FA9BD-B6E9-4A6C-8953-DC8811B13B48}" ShortID="893136557">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="8"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Resume_All" ID="{6AEC6D4A-624A-49B2-8C44-B691159E20FD}">
+					<ChildrenList>
+						<Action Name="" ID="{A0BAE309-79F5-4E84-B866-0D021B5C1E19}" ShortID="639498578">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="10"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Folder Name="SFX" ID="{F4998A0F-94DC-45F0-A447-49377A87EEE9}" ShortID="94416606">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="27"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Folder Name="Enemy" ID="{B1F97BB5-C7D7-4B57-A7DE-694308C737A0}" ShortID="273148593">
 							<PropertyList>
@@ -60,7 +131,17 @@
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="Shark_Attack" ID="{9ACF2D6E-6141-411C-86FF-2E53B5CD44AC}"/>
+								<Event Name="Shark_Attack" ID="{9ACF2D6E-6141-411C-86FF-2E53B5CD44AC}">
+									<ChildrenList>
+										<Action Name="" ID="{75C6D17F-0C71-4C5C-92C4-8040162B0867}" ShortID="801355637">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Shark Whoosh" ID="{30333D39-3149-48C5-A160-F5635ABB8BE3}" WorkUnitID="{B55BEC41-2C4E-4515-9470-FEFF230B50A0}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 								<Event Name="Fish_Collect" ID="{64C65064-6BE6-4BB1-8B4B-F90438993942}">
 									<ChildrenList>
 										<Action Name="" ID="{75368615-FF87-4BE6-BAB2-C290143BA582}" ShortID="156303032">
@@ -77,7 +158,7 @@
 										<Action Name="" ID="{7BCB414D-41D6-47B1-A114-0841D5E45946}" ShortID="724880880">
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="Bubbles_01" ID="{A3286E73-EC2B-4234-A0F4-5D470BC6D9D7}" WorkUnitID="{B55BEC41-2C4E-4515-9470-FEFF230B50A0}"/>
+													<ObjectRef Name="Swim" ID="{CD43A7E4-4710-464B-A730-A685A1FEE83B}" WorkUnitID="{B55BEC41-2C4E-4515-9470-FEFF230B50A0}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -102,7 +183,11 @@
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="Player_Death" ID="{16E41EB0-15B8-48F6-B207-3C5586BDCEFE}"/>
+								<Event Name="Player_Death" ID="{16E41EB0-15B8-48F6-B207-3C5586BDCEFE}">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool" Value="False"/>
+									</PropertyList>
+								</Event>
 								<Event Name="Player_Hurt" ID="{FF26F652-D2C7-4CF3-B973-7D9E1E5A7527}">
 									<ChildrenList>
 										<Action Name="" ID="{6B64790C-1371-4539-BFF5-3C64EA0BDAE8}" ShortID="193534357">
@@ -119,7 +204,7 @@
 										<Action Name="" ID="{AB35E7F9-5F9B-4B10-83CE-C7AB7E27F9F4}" ShortID="4225267">
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="Reload" ID="{B2CB76A7-BD34-4886-B85A-893D325CE9A3}" WorkUnitID="{B55BEC41-2C4E-4515-9470-FEFF230B50A0}"/>
+													<ObjectRef Name="Reload Start" ID="{542C1181-03BD-47AE-ABE2-3B440E17C553}" WorkUnitID="{B55BEC41-2C4E-4515-9470-FEFF230B50A0}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -129,7 +214,7 @@
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="Reload" ID="{B2CB76A7-BD34-4886-B85A-893D325CE9A3}" WorkUnitID="{B55BEC41-2C4E-4515-9470-FEFF230B50A0}"/>
+													<ObjectRef Name="Reload Finish" ID="{FC4F300E-F2EC-4EFD-8EFB-9288DBE16AC9}" WorkUnitID="{B55BEC41-2C4E-4515-9470-FEFF230B50A0}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -189,8 +274,32 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
+						<Folder Name="UI" ID="{D6A857E1-B0C5-40BC-82AE-BCF76F3FCE4D}" ShortID="1044294069">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="19"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Event Name="Purchase" ID="{6B55B602-7B1C-41CA-9591-50E21D8EAAA6}">
+									<ChildrenList>
+										<Action Name="" ID="{0F1783E0-2F71-40C7-B720-223674513D38}" ShortID="157818811">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Purchase" ID="{B8911B85-58CC-48BB-9147-F6E7A4859E4B}" WorkUnitID="{B55BEC41-2C4E-4515-9470-FEFF230B50A0}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
+				<Event Name="Game_Start" ID="{4E90DEE3-7539-43E7-8D45-6FA6C1546E75}">
+					<PropertyList>
+						<Property Name="Inclusion" Type="bool" Value="False"/>
+					</PropertyList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

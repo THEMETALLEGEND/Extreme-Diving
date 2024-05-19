@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{5B2A7B1C-EC8B-49F7-8A8A-14886F55131F}" SchemaVersion="119">
 	<SoundBanks>
-		<WorkUnit Name="Default Work Unit" ID="{5B2A7B1C-EC8B-49F7-8A8A-14886F55131F}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{5B2A7B1C-EC8B-49F7-8A8A-14886F55131F}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Main" ID="{F3DA3C73-02F9-4037-9543-300C31E7118E}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Shark_Attack" ID="{9ACF2D6E-6141-411C-86FF-2E53B5CD44AC}" WorkUnitID="{73FF4E2C-BB94-452E-B6A9-F949EDD3B03E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Enter_Water" ID="{8FAC7B0B-98BB-41C7-B2CE-F15CB7585066}" WorkUnitID="{73FF4E2C-BB94-452E-B6A9-F949EDD3B03E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player_Reload" ID="{4D4FE02D-B913-4218-B8F4-7885C55F5EA2}" WorkUnitID="{73FF4E2C-BB94-452E-B6A9-F949EDD3B03E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Swordfish_Attack" ID="{7A751A05-39AC-42E3-AFF2-4DF65069A8DD}" WorkUnitID="{73FF4E2C-BB94-452E-B6A9-F949EDD3B03E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Music_Town" ID="{60E273F4-43A4-4447-A0B3-C3EB0EDAE9AF}" WorkUnitID="{73FF4E2C-BB94-452E-B6A9-F949EDD3B03E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Pause_All" ID="{4FC19CA9-0D6A-46D1-B75E-929600DD27ED}" WorkUnitID="{73FF4E2C-BB94-452E-B6A9-F949EDD3B03E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Fish_Swim" ID="{E6A93D7C-30A4-4713-9CB2-03251595A610}" WorkUnitID="{73FF4E2C-BB94-452E-B6A9-F949EDD3B03E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Attack_Pistol" ID="{B007A249-C14B-4904-B6A6-259290B84596}" WorkUnitID="{73FF4E2C-BB94-452E-B6A9-F949EDD3B03E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Resume_All" ID="{6AEC6D4A-624A-49B2-8C44-B691159E20FD}" WorkUnitID="{73FF4E2C-BB94-452E-B6A9-F949EDD3B03E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Music" ID="{A181E44A-67F3-49B4-BF3C-FC5ABE4DEE66}" WorkUnitID="{73FF4E2C-BB94-452E-B6A9-F949EDD3B03E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Music" ID="{9A170B84-4F71-49F9-847C-70EC1CCF767E}" WorkUnitID="{73FF4E2C-BB94-452E-B6A9-F949EDD3B03E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Fish_Collect" ID="{64C65064-6BE6-4BB1-8B4B-F90438993942}" WorkUnitID="{73FF4E2C-BB94-452E-B6A9-F949EDD3B03E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player_Hurt" ID="{FF26F652-D2C7-4CF3-B973-7D9E1E5A7527}" WorkUnitID="{73FF4E2C-BB94-452E-B6A9-F949EDD3B03E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Exit_Water" ID="{B0FD7A04-593C-4E29-8DE0-5DE8204B9C60}" WorkUnitID="{73FF4E2C-BB94-452E-B6A9-F949EDD3B03E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Music_Gameplay" ID="{DC42921B-45BA-4EAE-8070-C84E9C3E56C7}" WorkUnitID="{73FF4E2C-BB94-452E-B6A9-F949EDD3B03E}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundBanks>
 </WwiseDocument>

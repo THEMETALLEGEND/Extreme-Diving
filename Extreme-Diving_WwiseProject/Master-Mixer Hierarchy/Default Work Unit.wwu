@@ -38,6 +38,12 @@
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 									</PropertyList>
 								</Bus>
+								<Bus Name="Menu" ID="{94D0C9D1-D4BC-41F7-979A-B10DAED61F05}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="19"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+								</Bus>
 							</ChildrenList>
 							<StateInfo>
 								<StateGroupList>
@@ -54,7 +60,7 @@
 										<StateRef Name="Underwater" ID="{5D6B107D-86C2-477E-AFC8-2AA3CEDBEC82}"/>
 										<CustomState Name="" ID="{9CB94FF7-9DE7-4162-84F2-5DAE2D7273FE}" ShortID="419772220">
 											<PropertyList>
-												<Property Name="Lowpass" Type="int16" Value="39"/>
+												<Property Name="Lowpass" Type="int16" Value="21"/>
 											</PropertyList>
 										</CustomState>
 									</CustomState>

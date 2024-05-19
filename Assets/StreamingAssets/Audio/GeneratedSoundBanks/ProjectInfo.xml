@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo>
+	<Project Name="Extreme-Diving_WwiseProject" GUID="{8664C362-58B9-48E2-8FA6-37DA867FBEF6}" Generator="2023.1.1.8417"/>
+	<CacheRoot>../../../../Extreme-Diving_WwiseProject/.cache</CacheRoot>
+	<Platforms>
+		<Platform Name="Mac" GUID="{EE880DB1-C778-4957-9583-CD4CD6342D5B}" BasePlatform="Mac" BasePlatformGUID="{9C6217D5-DD11-4795-87C1-6CE02853C540}" Path="../../../../Extreme-Diving_WwiseProject/GeneratedSoundBanks/Mac"/>
+		<Platform Name="Windows" GUID="{EBD01888-EA49-4B21-8D95-CAE2A1938100}" BasePlatform="Windows" BasePlatformGUID="{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}" Path="../../../../Extreme-Diving_WwiseProject/GeneratedSoundBanks/Windows"/>
+	</Platforms>
+	<Languages>
+		<Language Name="English(US)" Id="684519430" GUID="{2C63B16B-BA10-4EF9-B89A-E9B1F4A2849E}" Default="true" UseAsStandIn="true"/>
+	</Languages>
+	<FileHash>{A8EE8509-433E-D774-E4C4-52129AFB91FA}</FileHash>
+</ProjectInfo>

@@ -13,13 +13,30 @@
 							<ObjectRef Name="Swordfish_Attack" ID="{7A751A05-39AC-42E3-AFF2-4DF65069A8DD}" WorkUnitID="{73FF4E2C-BB94-452E-B6A9-F949EDD3B03E}"/>
 							<Position X="0" Y="1"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="Exit_Water" ID="{B0FD7A04-593C-4E29-8DE0-5DE8204B9C60}" WorkUnitID="{73FF4E2C-BB94-452E-B6A9-F949EDD3B03E}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Shark_Attack" ID="{9ACF2D6E-6141-411C-86FF-2E53B5CD44AC}" WorkUnitID="{73FF4E2C-BB94-452E-B6A9-F949EDD3B03E}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Player_Hurt" ID="{FF26F652-D2C7-4CF3-B973-7D9E1E5A7527}" WorkUnitID="{73FF4E2C-BB94-452E-B6A9-F949EDD3B03E}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Attack_Pistol" ID="{B007A249-C14B-4904-B6A6-259290B84596}" WorkUnitID="{73FF4E2C-BB94-452E-B6A9-F949EDD3B03E}"/>
+							<Position X="3" Y="0"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="Surface" ID="{8416AB7A-76BC-46FD-AF03-06BC8219835C}"/>
+						<CurrentStateRef Name="None" ID="{7188F8E2-D0DD-410D-82F4-12337F320D68}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="Abyss" ID="{11B82CD9-2BBB-4C26-A6A9-1923329ED86B}"/>
+						<CurrentSwitchRef Name="Deep" ID="{6E231EE5-BCAB-49F3-B08F-19CA3DF3CDCF}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>
