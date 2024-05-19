@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{611BC45E-F628-435B-A427-339328E5193A}" SchemaVersion="119">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{611BC45E-F628-435B-A427-339328E5193A}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{611BC45E-F628-435B-A427-339328E5193A}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Depth" ID="{EB0AAE94-0688-41AF-B668-2AF956A685CA}">
+					<ChildrenList>
+						<Switch Name="Surface" ID="{706CFDAE-2146-4F62-AD38-D2E2D2F3FE69}"/>
+						<Switch Name="Shallow" ID="{D1878F1B-6057-400D-A7C5-61C7481B48EC}"/>
+						<Switch Name="Deep" ID="{6E231EE5-BCAB-49F3-B08F-19CA3DF3CDCF}"/>
+						<Switch Name="Abyss" ID="{11B82CD9-2BBB-4C26-A6A9-1923329ED86B}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>

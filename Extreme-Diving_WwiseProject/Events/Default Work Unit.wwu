@@ -1,6 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{73FF4E2C-BB94-452E-B6A9-F949EDD3B03E}" SchemaVersion="119">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{73FF4E2C-BB94-452E-B6A9-F949EDD3B03E}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{73FF4E2C-BB94-452E-B6A9-F949EDD3B03E}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Music" ID="{D89F714B-8C5E-44ED-80C1-4BE09DF6E7D2}" ShortID="451649224">
+					<ChildrenList>
+						<Event Name="Play_Music" ID="{A181E44A-67F3-49B4-BF3C-FC5ABE4DEE66}"/>
+						<Event Name="Stop_Music" ID="{9A170B84-4F71-49F9-847C-70EC1CCF767E}"/>
+						<Event Name="Music_Gameplay" ID="{DC42921B-45BA-4EAE-8070-C84E9C3E56C7}"/>
+						<Event Name="Music_Menu" ID="{60E273F4-43A4-4447-A0B3-C3EB0EDAE9AF}"/>
+					</ChildrenList>
+				</Folder>
+				<Event Name="Pause_All" ID="{4FC19CA9-0D6A-46D1-B75E-929600DD27ED}"/>
+				<Event Name="Resume_All" ID="{6AEC6D4A-624A-49B2-8C44-B691159E20FD}"/>
+				<Folder Name="SFX" ID="{F4998A0F-94DC-45F0-A447-49377A87EEE9}" ShortID="94416606">
+					<ChildrenList>
+						<Folder Name="Enemy" ID="{B1F97BB5-C7D7-4B57-A7DE-694308C737A0}" ShortID="273148593">
+							<ChildrenList>
+								<Event Name="Swordfish_Attack" ID="{7A751A05-39AC-42E3-AFF2-4DF65069A8DD}">
+									<ChildrenList>
+										<Action Name="" ID="{1984BF28-4D0A-4A51-BEBF-F829D48EC7E2}" ShortID="622908083">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Swordfish Prep" ID="{F71F4DAB-3B18-4AB5-85F4-632C7596D23E}" WorkUnitID="{B55BEC41-2C4E-4515-9470-FEFF230B50A0}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{EA77374F-D0A8-40E4-B848-A6786AD5B56A}" ShortID="693556696">
+											<PropertyList>
+												<Property Name="Delay" Type="Real64" Value="0.06"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Swordfish Attack" ID="{0A910A3A-4874-4BED-858E-D9E7B50CFDD1}" WorkUnitID="{B55BEC41-2C4E-4515-9470-FEFF230B50A0}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Shark_Attack" ID="{9ACF2D6E-6141-411C-86FF-2E53B5CD44AC}"/>
+								<Event Name="Enemy_Death" ID="{B73F40F0-1D06-49C8-9510-7022A08AAE05}"/>
+								<Event Name="Enemy_Swim" ID="{8A000FB1-F422-4B57-86AC-FF5B4F8E5F43}"/>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Player" ID="{673233FF-CE74-4190-B3D1-680C82D57965}" ShortID="518261302">
+							<ChildrenList>
+								<Event Name="Player_Move" ID="{6BB86930-2743-4414-91EE-4E371402D8E4}"/>
+								<Event Name="Attack_Pistol" ID="{B007A249-C14B-4904-B6A6-259290B84596}"/>
+								<Event Name="Attack_Shotgun" ID="{4C546191-9906-4A21-B550-8EC17C2FEFC9}"/>
+								<Event Name="Player_Death" ID="{16E41EB0-15B8-48F6-B207-3C5586BDCEFE}"/>
+								<Event Name="Player_Hurt" ID="{FF26F652-D2C7-4CF3-B973-7D9E1E5A7527}"/>
+								<Event Name="Attack_MachineGun" ID="{7E50F777-A02C-436B-B420-BD679D19A2B2}"/>
+								<Event Name="Player_Reload" ID="{4D4FE02D-B913-4218-B8F4-7885C55F5EA2}"/>
+								<Event Name="Enter_Splash" ID="{8FAC7B0B-98BB-41C7-B2CE-F15CB7585066}">
+									<ChildrenList>
+										<Action Name="" ID="{3BD28617-CEAD-4618-85CF-0285DEE57D44}" ShortID="538469606">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Splash Hard" ID="{1DA7CBD3-FE71-43F6-A421-51893F5360E3}" WorkUnitID="{B55BEC41-2C4E-4515-9470-FEFF230B50A0}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{A788DA08-76AC-48FA-BD43-D5F2CF61A30A}" ShortID="772382848">
+											<PropertyList>
+												<Property Name="Delay" Type="Real64" Value="0.35"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Splash Rain" ID="{CCDD6491-CA90-4894-A69C-ACC3415D4F8F}" WorkUnitID="{B55BEC41-2C4E-4515-9470-FEFF230B50A0}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Exit_Splash" ID="{B0FD7A04-593C-4E29-8DE0-5DE8204B9C60}">
+									<ChildrenList>
+										<Action Name="" ID="{0879561E-D348-4121-A96C-6D9EDD83838F}" ShortID="886996631">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Splash Soft" ID="{ACC24778-DE2B-4378-8330-5FC8B47F9830}" WorkUnitID="{B55BEC41-2C4E-4515-9470-FEFF230B50A0}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Attack_Bomb" ID="{BE632EAC-C8B9-4D5C-8B36-D110EA60AA49}"/>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

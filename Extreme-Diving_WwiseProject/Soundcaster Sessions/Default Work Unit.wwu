@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{869D6DC8-E5C2-4CA1-8894-B1FF355A33D0}" SchemaVersion="119">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{869D6DC8-E5C2-4CA1-8894-B1FF355A33D0}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{869D6DC8-E5C2-4CA1-8894-B1FF355A33D0}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="SFX Test" ID="{EF1A3C18-EE2C-410B-83B3-001DE5C4B285}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Enter_Splash" ID="{8FAC7B0B-98BB-41C7-B2CE-F15CB7585066}" WorkUnitID="{73FF4E2C-BB94-452E-B6A9-F949EDD3B03E}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Abyss" ID="{11B82CD9-2BBB-4C26-A6A9-1923329ED86B}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

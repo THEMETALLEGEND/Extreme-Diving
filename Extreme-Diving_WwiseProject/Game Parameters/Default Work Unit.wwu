@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{4FE62E34-C95F-4B67-B686-8927BB757FF8}" SchemaVersion="119">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{4FE62E34-C95F-4B67-B686-8927BB757FF8}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{4FE62E34-C95F-4B67-B686-8927BB757FF8}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="O2_Meter" ID="{BB4CFD51-3364-4D04-8D15-2A4EB08E82F4}"/>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>

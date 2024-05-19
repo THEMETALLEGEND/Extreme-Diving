@@ -1,6 +1,413 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{B55BEC41-2C4E-4515-9470-FEFF230B50A0}" SchemaVersion="119">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{B55BEC41-2C4E-4515-9470-FEFF230B50A0}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{B55BEC41-2C4E-4515-9470-FEFF230B50A0}" PersistMode="Standalone">
+			<ChildrenList>
+				<ActorMixer Name="Player" ID="{56124E83-0996-4556-BD7D-D7FC891CDD1F}" ShortID="834009257">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="2"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7A4083B6-EE51-49F3-8DE9-21077ED03AD5}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Player" ID="{E32D4619-2679-41AE-A255-83572CAC533C}" WorkUnitID="{2CF915C1-BDBA-436A-89F6-D3DD29B8A02B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="Splash" ID="{0EBC7EB8-E00A-41DA-AB16-D303AEDE1C31}" ShortID="811178430">
+							<PropertyList>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7A4083B6-EE51-49F3-8DE9-21077ED03AD5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2CF915C1-BDBA-436A-89F6-D3DD29B8A02B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Splash Hard" ID="{1DA7CBD3-FE71-43F6-A421-51893F5360E3}" ShortID="888439514">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>35</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-1250</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{4FBA8259-8C4B-433E-943C-612F036D4E78}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="404"/>
+															<Property Name="Min" Type="Real64" Value="-127"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7A4083B6-EE51-49F3-8DE9-21077ED03AD5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2CF915C1-BDBA-436A-89F6-D3DD29B8A02B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Splash" ID="{CF16B8A7-AD2E-46FF-B4AF-260B59781DCF}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.118304345671671"/>
+												<Property Name="FadeInShape" Type="int16" Value="6"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.377785210511537"/>
+												<Property Name="FadeOutShape" Type="int16" Value="6"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.60729564111458"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Splash.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="565018162"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Splash" ID="{CF16B8A7-AD2E-46FF-B4AF-260B59781DCF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Splash Soft" ID="{ACC24778-DE2B-4378-8330-5FC8B47F9830}" ShortID="8693544">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>44</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-700</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{960E2E36-3559-4D42-B06C-6A6155C6BE06}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="101"/>
+															<Property Name="Min" Type="Real64" Value="-101"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7A4083B6-EE51-49F3-8DE9-21077ED03AD5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2CF915C1-BDBA-436A-89F6-D3DD29B8A02B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Splash" ID="{A327D7BC-2F7E-413D-A1FD-6B23176A05CF}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.294972168541367"/>
+												<Property Name="FadeInShape" Type="int16" Value="9"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.288662603438878"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.685376509257883"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Splash.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="796921303"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Splash" ID="{A327D7BC-2F7E-413D-A1FD-6B23176A05CF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Splash Rain" ID="{CCDD6491-CA90-4894-A69C-ACC3415D4F8F}" ShortID="378972481">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-21</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7A4083B6-EE51-49F3-8DE9-21077ED03AD5}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2CF915C1-BDBA-436A-89F6-D3DD29B8A02B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<SourcePlugin Name="Synth One" ID="{B2B3EE95-CAA3-42FF-A9F0-82D8775E24A7}" ShortID="409964680" PluginName="Wwise Synth One" CompanyID="0" PluginID="148">
+											<PropertyList>
+												<Property Name="BaseFrequency" Type="Real32" Value="778"/>
+												<Property Name="NoiseLevel" Type="Real32" Value="-11"/>
+												<Property Name="NoiseShape" Type="int32" Value="1"/>
+												<Property Name="Osc1Level" Type="Real32" Value="-96"/>
+												<Property Name="Osc2Level" Type="Real32" Value="-96"/>
+											</PropertyList>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{F776C207-FAFD-4001-9287-71E697F18B63}" ShortID="247564088">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="OutputLevel"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="Rain env" ID="{CADDB982-BE4B-47F8-8B3A-049CD6858925}" WorkUnitID="{BD421D70-9558-4DD7-94AC-65DACC5C1692}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{55410735-1912-4469-BD26-A3DFCD33D607}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="3"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>-120</YPos>
+																						<Flags>21</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>1</XPos>
+																						<YPos>-0</YPos>
+																						<Flags>53</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+											<Language>SFX</Language>
+										</SourcePlugin>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Synth One" ID="{B2B3EE95-CAA3-42FF-A9F0-82D8775E24A7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Playlist">
+									<Reference>
+										<ObjectRef Name="Splash Hard" ID="{1DA7CBD3-FE71-43F6-A421-51893F5360E3}" WorkUnitID="{B55BEC41-2C4E-4515-9470-FEFF230B50A0}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="Splash Soft" ID="{ACC24778-DE2B-4378-8330-5FC8B47F9830}" WorkUnitID="{B55BEC41-2C4E-4515-9470-FEFF230B50A0}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="Splash Rain" ID="{CCDD6491-CA90-4894-A69C-ACC3415D4F8F}" WorkUnitID="{B55BEC41-2C4E-4515-9470-FEFF230B50A0}"/>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</RandomSequenceContainer>
+						<Sound Name="Player Hurt" ID="{69CB1DE7-C395-48C2-916B-352DD7F3A787}" ShortID="707876284">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7A4083B6-EE51-49F3-8DE9-21077ED03AD5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2CF915C1-BDBA-436A-89F6-D3DD29B8A02B}"/>
+								</Reference>
+							</ReferenceList>
+						</Sound>
+						<Sound Name="Player Swim" ID="{E9D95A13-044C-42E8-920A-93B32D78B574}" ShortID="681045110">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7A4083B6-EE51-49F3-8DE9-21077ED03AD5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2CF915C1-BDBA-436A-89F6-D3DD29B8A02B}"/>
+								</Reference>
+							</ReferenceList>
+						</Sound>
+						<Sound Name="Reload" ID="{11F87683-1487-4CCB-981B-71B30BDADAB1}" ShortID="767674655">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7A4083B6-EE51-49F3-8DE9-21077ED03AD5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2CF915C1-BDBA-436A-89F6-D3DD29B8A02B}"/>
+								</Reference>
+							</ReferenceList>
+						</Sound>
+						<Sound Name="Shoot" ID="{A77B5A83-546B-4633-B550-6F262AA30701}" ShortID="605640880">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7A4083B6-EE51-49F3-8DE9-21077ED03AD5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2CF915C1-BDBA-436A-89F6-D3DD29B8A02B}"/>
+								</Reference>
+							</ReferenceList>
+						</Sound>
+						<Sound Name="Player Damage" ID="{26122771-6064-4D08-A34D-0E062F84B7C6}" ShortID="612783760">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7A4083B6-EE51-49F3-8DE9-21077ED03AD5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2CF915C1-BDBA-436A-89F6-D3DD29B8A02B}"/>
+								</Reference>
+							</ReferenceList>
+						</Sound>
+					</ChildrenList>
+				</ActorMixer>
+				<ActorMixer Name="Fish" ID="{1EA432E1-C6D2-43B1-A07D-0A7D2996F50C}" ShortID="765240511">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="23"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7A4083B6-EE51-49F3-8DE9-21077ED03AD5}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2CF915C1-BDBA-436A-89F6-D3DD29B8A02B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Fish Swim" ID="{7BDDF7D9-F67E-4B1E-A22F-74B30F89CB01}" ShortID="260066746">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7A4083B6-EE51-49F3-8DE9-21077ED03AD5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2CF915C1-BDBA-436A-89F6-D3DD29B8A02B}"/>
+								</Reference>
+							</ReferenceList>
+						</Sound>
+						<Sound Name="Swordfish Prep" ID="{F71F4DAB-3B18-4AB5-85F4-632C7596D23E}" ShortID="804499985">
+							<PropertyList>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>18</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>1190</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{B96896B4-318B-4AB4-AA5B-151D2091C628}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="50"/>
+													<Property Name="Min" Type="Real64" Value="-50"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7A4083B6-EE51-49F3-8DE9-21077ED03AD5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2CF915C1-BDBA-436A-89F6-D3DD29B8A02B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Knife Scrape" ID="{8AEC69AD-151D-424C-A457-2751C821F114}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.157750760380462"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.582584491306061"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.12338920861442"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.32135785427595"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Knife Scrape.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="711590029"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Knife Scrape" ID="{8AEC69AD-151D-424C-A457-2751C821F114}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Swordfish Attack" ID="{0A910A3A-4874-4BED-858E-D9E7B50CFDD1}" ShortID="631867991">
+							<PropertyList>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>60</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-1550</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7A4083B6-EE51-49F3-8DE9-21077ED03AD5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2CF915C1-BDBA-436A-89F6-D3DD29B8A02B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Moving splash" ID="{A53FE21F-8CEF-425B-AC95-2258B9148CAD}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0890276568483793"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.126512986047697"/>
+										<Property Name="FadeOutShape" Type="int16" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.245216528512203"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Moving splash.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="21161443"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Moving splash" ID="{A53FE21F-8CEF-425B-AC95-2258B9148CAD}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>
