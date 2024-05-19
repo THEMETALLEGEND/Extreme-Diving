@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{ACC78F48-4484-4113-B043-1AC2F03B4E3E}" SchemaVersion="119">
 	<Effects>
-		<WorkUnit Name="Default Work Unit" ID="{ACC78F48-4484-4113-B043-1AC2F03B4E3E}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{ACC78F48-4484-4113-B043-1AC2F03B4E3E}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="Gun_fattener" ID="{A869653C-93DB-449E-99F6-0B5389C45339}" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+					<PropertyList>
+						<Property Name="CenterLevel" Type="Real32" Value="-4"/>
+						<Property Name="DecayTime" Type="Real32" Value="2.3"/>
+						<Property Name="Density" Type="Real32" Value="100"/>
+						<Property Name="DryLevel" Type="Real32" Value="-0.3"/>
+						<Property Name="ERPattern" Type="int32" Value="13"/>
+						<Property Name="EnableToneControls" Type="bool" Value="True"/>
+						<Property Name="Filter1Gain" Type="Real32" Value="13.5"/>
+						<Property Name="Filter3Gain" Type="Real32" Value="-6.5"/>
+						<Property Name="FrontLevel" Type="Real32" Value="-1"/>
+						<Property Name="HFDamping" Type="Real32" Value="5.35"/>
+						<Property Name="InputCenterLevel" Type="Real32" Value="-4"/>
+						<Property Name="InputLFELevel" Type="Real32" Value="-23.3"/>
+						<Property Name="LFELevel" Type="Real32" Value="-20.3"/>
+						<Property Name="PreDelay" Type="Real32" Value="7"/>
+						<Property Name="ReverbLevel" Type="Real32" Value="-36"/>
+						<Property Name="RoomShape" Type="Real32" Value="35"/>
+						<Property Name="RoomSize" Type="Real32" Value="24"/>
+					</PropertyList>
+				</Effect>
+			</ChildrenList>
+		</WorkUnit>
 	</Effects>
 </WwiseDocument>

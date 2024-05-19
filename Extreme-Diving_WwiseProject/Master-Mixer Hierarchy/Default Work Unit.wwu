@@ -4,6 +4,13 @@
 		<WorkUnit Name="Default Work Unit" ID="{2CF915C1-BDBA-436A-89F6-D3DD29B8A02B}" PersistMode="Standalone">
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<PropertyList>
+						<Property Name="BusVolume" Type="Real64">
+							<ValueList>
+								<Value>5</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
 							<ObjectRef Name="System" ID="{74305A9C-1724-4284-98AF-E7F8C776DF1F}" WorkUnitID="{02B7D3C2-5927-4DF6-92CB-5721F94B29E3}"/>
@@ -13,9 +20,50 @@
 						<Bus Name="Music" ID="{AC2B7A53-D09B-4A23-9E3D-FAE661FDA803}"/>
 						<Bus Name="SFX" ID="{D4EE706F-4487-436B-86B4-A577E110B287}">
 							<ChildrenList>
-								<Bus Name="Environment" ID="{C19CB28D-363D-4727-8BF1-7F924025F2D6}"/>
-								<Bus Name="Player" ID="{E32D4619-2679-41AE-A255-83572CAC533C}"/>
+								<Bus Name="Environment" ID="{C19CB28D-363D-4727-8BF1-7F924025F2D6}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="17"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+								</Bus>
+								<Bus Name="Player" ID="{E32D4619-2679-41AE-A255-83572CAC533C}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="2"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+								</Bus>
+								<Bus Name="Enemy" ID="{9EB3BF3D-78FC-4B2B-999B-BD3624D0D21C}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="23"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+								</Bus>
 							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Water" ID="{B8333C08-1F20-4649-ABE4-1951F4765D95}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Surface" ID="{8416AB7A-76BC-46FD-AF03-06BC8219835C}"/>
+										<CustomState Name="" ID="{DECB33B4-735C-4613-A48B-901DF0BD5882}" ShortID="706597290"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Underwater" ID="{5D6B107D-86C2-477E-AFC8-2AA3CEDBEC82}"/>
+										<CustomState Name="" ID="{9CB94FF7-9DE7-4162-84F2-5DAE2D7273FE}" ShortID="419772220">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16" Value="39"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Paused" ID="{92E9EDE5-A5A4-47FC-9D93-A41008F7D3FA}"/>
+										<CustomState Name="" ID="{03F5DD5F-5F75-46A0-B019-49EBFE47B076}" ShortID="36207106"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 						</Bus>
 					</ChildrenList>
 				</Bus>

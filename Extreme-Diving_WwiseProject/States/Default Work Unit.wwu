@@ -15,6 +15,7 @@
 						<State Name="None" ID="{2BEDF28F-21AD-4A36-AB77-9DD63313DAEF}"/>
 						<State Name="Underwater" ID="{5D6B107D-86C2-477E-AFC8-2AA3CEDBEC82}"/>
 						<State Name="Surface" ID="{8416AB7A-76BC-46FD-AF03-06BC8219835C}"/>
+						<State Name="Paused" ID="{92E9EDE5-A5A4-47FC-9D93-A41008F7D3FA}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>

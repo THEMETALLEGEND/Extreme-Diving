@@ -6,12 +6,18 @@
 				<SoundcasterSession Name="SFX Test" ID="{EF1A3C18-EE2C-410B-83B3-001DE5C4B285}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="Enter_Splash" ID="{8FAC7B0B-98BB-41C7-B2CE-F15CB7585066}" WorkUnitID="{73FF4E2C-BB94-452E-B6A9-F949EDD3B03E}"/>
+							<ObjectRef Name="Enter_Water" ID="{8FAC7B0B-98BB-41C7-B2CE-F15CB7585066}" WorkUnitID="{73FF4E2C-BB94-452E-B6A9-F949EDD3B03E}"/>
 							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Swordfish_Attack" ID="{7A751A05-39AC-42E3-AFF2-4DF65069A8DD}" WorkUnitID="{73FF4E2C-BB94-452E-B6A9-F949EDD3B03E}"/>
+							<Position X="0" Y="1"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
-					<CurrentStateList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Surface" ID="{8416AB7A-76BC-46FD-AF03-06BC8219835C}"/>
+					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Abyss" ID="{11B82CD9-2BBB-4C26-A6A9-1923329ED86B}"/>
 					</CurrentSwitchList>
