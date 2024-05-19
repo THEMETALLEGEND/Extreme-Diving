@@ -18,15 +18,12 @@ namespace AK
         static const AkUniqueID EXIT_WATER = 387843989U;
         static const AkUniqueID FISH_COLLECT = 1348106800U;
         static const AkUniqueID FISH_SWIM = 1699223174U;
-        static const AkUniqueID MUSIC_GAMEPLAY = 620878633U;
-        static const AkUniqueID MUSIC_TOWN = 1000251281U;
         static const AkUniqueID PAUSE_ALL = 3864097025U;
-        static const AkUniqueID PLAY_MUSIC = 2932040671U;
         static const AkUniqueID PLAYER_HURT = 1068092414U;
         static const AkUniqueID PLAYER_RELOAD = 1650679582U;
+        static const AkUniqueID PURCHASE = 3809213376U;
         static const AkUniqueID RESUME_ALL = 3679762312U;
         static const AkUniqueID SHARK_ATTACK = 1677670675U;
-        static const AkUniqueID STOP_MUSIC = 2837384057U;
         static const AkUniqueID SWORDFISH_ATTACK = 790547833U;
     } // namespace EVENTS
 
@@ -92,6 +89,7 @@ namespace AK
         static const AkUniqueID ENEMY = 2299321487U;
         static const AkUniqueID ENVIRONMENT = 1229948536U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MENU = 2607556080U;
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID PLAYER = 1069431850U;
         static const AkUniqueID SFX = 393239870U;

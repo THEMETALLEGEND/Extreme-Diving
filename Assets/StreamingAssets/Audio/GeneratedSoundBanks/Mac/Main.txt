@@ -1,0 +1,45 @@
+Event	ID	Name			Wwise Object Path	Notes
+	387843989	Exit_Water			\Default Work Unit\SFX\Player\Exit_Water	
+	790547833	Swordfish_Attack			\Default Work Unit\SFX\Enemy\Swordfish_Attack	
+	1068092414	Player_Hurt			\Default Work Unit\SFX\Player\Player_Hurt	
+	1348106800	Fish_Collect			\Default Work Unit\SFX\Enemy\Fish_Collect	
+	1650679582	Player_Reload			\Default Work Unit\SFX\Player\Player_Reload	
+	1677670675	Shark_Attack			\Default Work Unit\SFX\Enemy\Shark_Attack	
+	1699223174	Fish_Swim			\Default Work Unit\SFX\Enemy\Fish_Swim	
+	2791278421	Attack_Pistol			\Default Work Unit\SFX\Player\Attack_Pistol	
+	3679762312	Resume_All			\Default Work Unit\Resume_All	
+	3809213376	Purchase			\Default Work Unit\SFX\UI\Purchase	
+	3864097025	Pause_All			\Default Work Unit\Pause_All	
+	4125161945	Enter_Water			\Default Work Unit\SFX\Player\Enter_Water	
+
+Modulator Envelope	ID	Name			Wwise Object Path	Notes
+	929162263	Rain env			\Default Work Unit\Rain env	
+
+Effect plug-ins	ID	Name	Type				Notes
+	549295196	RoomVerb (Custom)	Wwise RoomVerb			
+	1008402193	Low_Pass_20KHz	Wwise Parametric EQ			
+	3128308983	Gun_fattener	Wwise RoomVerb			
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	409964680	Synth One	Wwise Synth One		\Actor-Mixer Hierarchy\Default Work Unit\Player\Splash\Splash Rain\Synth One	
+	763389728	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Fish\Swim\New Silence\Silence	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	28182024	Reload Close	Y:\Desktop\Github\PJ2024\Extreme-Diving\Extreme-Diving_WwiseProject\.cache\Mac\SFX\Reload 1_310B5A45.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Reload Finish\Reload Close		16280
+	65861418	Player Damage	Y:\Desktop\Github\PJ2024\Extreme-Diving\Extreme-Diving_WwiseProject\.cache\Mac\SFX\Spell Hit_316F026B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Player Damage		13220
+	197621370	Purchase	Y:\Desktop\Github\PJ2024\Extreme-Diving\Extreme-Diving_WwiseProject\.cache\Mac\SFX\Coins_B5F99166.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu\Purchase\Purchase		25262
+	260430760	Swordfish Whoosh	Y:\Desktop\Github\PJ2024\Extreme-Diving\Extreme-Diving_WwiseProject\.cache\Mac\SFX\Slow Woosh_3CDE5EE7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Fish\Swordfish Whoosh		38728
+	369084487	Shoot	Y:\Desktop\Github\PJ2024\Extreme-Diving\Extreme-Diving_WwiseProject\.cache\Mac\SFX\Zoom Bomber_CE7D9B2E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Shoot		18376
+	475518339	Bubbles_01	Y:\Desktop\Github\PJ2024\Extreme-Diving\Extreme-Diving_WwiseProject\.cache\Mac\SFX\Bubbles_79AB78CA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Fish\Swim\Bubbles_01		36086
+	534860940	Shark Whoosh	Y:\Desktop\Github\PJ2024\Extreme-Diving\Extreme-Diving_WwiseProject\.cache\Mac\SFX\Slow Woosh_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Fish\Shark Whoosh		58316
+	545199776	Reload Open	Y:\Desktop\Github\PJ2024\Extreme-Diving\Extreme-Diving_WwiseProject\.cache\Mac\SFX\Reload 1_11E15E67.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Reload Start\Reload Open		32766
+	565018162	Splash Hard	Y:\Desktop\Github\PJ2024\Extreme-Diving\Extreme-Diving_WwiseProject\.cache\Mac\SFX\Splash_31889CCC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Splash\Splash Hard		107224
+	624094111	Collected fish_02	Y:\Desktop\Github\PJ2024\Extreme-Diving\Extreme-Diving_WwiseProject\.cache\Mac\SFX\Fish Collect_3797D734.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Fish Collect\Collected fish_02		22144
+	656771279	Collected fish_01	Y:\Desktop\Github\PJ2024\Extreme-Diving\Extreme-Diving_WwiseProject\.cache\Mac\SFX\Fish Collect_F8CB3FD6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Fish Collect\Collected fish_01		16264
+	696763621	Coins_1	Y:\Desktop\Github\PJ2024\Extreme-Diving\Extreme-Diving_WwiseProject\.cache\Mac\SFX\Coins_1_169BCC7A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu\Purchase\Coins_1		24040
+	711590029	Swordfish Shine	Y:\Desktop\Github\PJ2024\Extreme-Diving\Extreme-Diving_WwiseProject\.cache\Mac\SFX\Knife Scrape_E5949CBE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Fish\Swordfish Shine		105758
+	796921303	Splash Soft	Y:\Desktop\Github\PJ2024\Extreme-Diving\Extreme-Diving_WwiseProject\.cache\Mac\SFX\Splash_5D93050C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Splash\Splash Soft		120996
+	805791028	Collected fish	Y:\Desktop\Github\PJ2024\Extreme-Diving\Extreme-Diving_WwiseProject\.cache\Mac\SFX\Fish Collect_2369EEB6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Fish Collect\Collected fish		24348
+	854889507	Spatula scrape	Y:\Desktop\Github\PJ2024\Extreme-Diving\Extreme-Diving_WwiseProject\.cache\Mac\SFX\Spatula scrape_65FB24BD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Reload Finish\Spatula scrape		36192
+	1069922472	Spatula scrape	Y:\Desktop\Github\PJ2024\Extreme-Diving\Extreme-Diving_WwiseProject\.cache\Mac\SFX\Spatula scrape_80F5602E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Reload Start\Spatula scrape		17652
+
