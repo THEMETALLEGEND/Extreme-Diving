@@ -12,6 +12,8 @@ public class Bullet : MonoBehaviour
 		Destroy(gameObject, lifeTime);
 	}
 
+
+
 	private void OnCollisionEnter2D(Collision2D coll)
 	{
 		if (coll.gameObject.CompareTag("Enemy")) // Проверяем, является ли объект врагом

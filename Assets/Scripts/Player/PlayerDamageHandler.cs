@@ -13,11 +13,14 @@ public class PlayerDamageHandler : MonoBehaviour
 	private PlayerMovement movementScript;
 	private PlayerInventory inventory;
 
+	public GameObject gameOverScreen;
+
 	void Start()
 	{
 		rb = GetComponent<Rigidbody2D>();
 		movementScript = GetComponent<PlayerMovement>();
 		inventory = PlayerInventory.Instance;
+		gameOverScreen = FindInactiveObjectByName("Game Over Screen");
 	}
 
 	void OnCollisionEnter2D(Collision2D collision)
@@ -132,7 +135,25 @@ public class PlayerDamageHandler : MonoBehaviour
 	{
 		// Здесь вы можете добавить логику для смерти игрока, например, проигрывание анимации смерти, перезапуск уровня и т.д.
 		Debug.Log("Player has died.");
+		gameOverScreen.SetActive(true);
 		// Пример перезапуска уровня:
 		// UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+	}
+
+	private GameObject FindInactiveObjectByName(string objectName)
+	{
+		// FindObjectsOfTypeAll returns all objects in the project, including inactive ones
+		UnityEngine.Object[] objects = Resources.FindObjectsOfTypeAll<GameObject>();
+
+		// Iterate through all objects with the specified name
+		foreach (UnityEngine.Object obj in objects)
+		{
+			if (obj is GameObject && obj.name == objectName && !((GameObject)obj).activeSelf)
+			{
+				return (GameObject)obj;
+			}
+		}
+
+		return null;
 	}
 }

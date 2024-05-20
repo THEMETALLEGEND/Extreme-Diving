@@ -58,6 +58,7 @@ public class PlayerInventory : MonoBehaviour
 			+ sharkCost * sharkAvailable;
 
 		fishCountText.text = fishCount.ToString() + "$";
+		moneyCountText.text = moneyCount.ToString() + "$";
 	}
 
 	public void SellFish()
@@ -91,5 +92,12 @@ public class PlayerInventory : MonoBehaviour
 			}
 			return instance;
 		}
+	}
+
+
+
+	public void ReloadScene()
+	{
+		UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
 	}
 }

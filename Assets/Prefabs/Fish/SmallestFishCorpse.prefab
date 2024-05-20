@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 8077559197582215091}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.850786, y: -7.4843135, z: 0.035368994}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.74999994, y: 0.74999994, z: 0.74999994}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8077559197681032696}
   m_Father: {fileID: 0}
@@ -115,6 +115,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fishType: 0
+  isScattered: 0
+  colliderEnableDelay: 0.5
+  standartDestoyTimer: 7
+  scatterDestroyTimer: 2
 --- !u!1 &8077559197681032697
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,10 +192,10 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3625043607559282579, guid: 19fb86013d8c24d6cb8410c0aadf30fa, type: 3}
-  m_Color: {r: 0.3773585, g: 0.01601993, b: 0.22721244, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 5bd246a45a28c4c76919aab53e3af073, type: 3}
+  m_Color: {r: 0.20274118, g: 0.40423366, b: 0.6415094, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 1, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
