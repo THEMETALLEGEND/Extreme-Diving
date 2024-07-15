@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{BD421D70-9558-4DD7-94AC-65DACC5C1692}" SchemaVersion="119">
 	<Modulators>
-		<WorkUnit Name="Default Work Unit" ID="{BD421D70-9558-4DD7-94AC-65DACC5C1692}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{BD421D70-9558-4DD7-94AC-65DACC5C1692}" PersistMode="Standalone">
+			<ChildrenList>
+				<ModulatorEnvelope Name="Rain env" ID="{CADDB982-BE4B-47F8-8B3A-049CD6858925}" ShortID="929162263">
+					<PropertyList>
+						<Property Name="EnvelopeAttackCurve" Type="Real64" Value="0"/>
+						<Property Name="EnvelopeAttackTime" Type="Real64" Value="0.399"/>
+						<Property Name="EnvelopeAutoRelease" Type="bool" Value="True"/>
+						<Property Name="EnvelopeDecayTime" Type="Real64" Value="0.053"/>
+						<Property Name="EnvelopeReleaseTime" Type="Real64" Value="1.034"/>
+						<Property Name="EnvelopeSustainTime" Type="Real64" Value="0.17"/>
+						<Property Name="ModulatorScope" Type="int32" Value="0"/>
+					</PropertyList>
+				</ModulatorEnvelope>
+			</ChildrenList>
+		</WorkUnit>
 	</Modulators>
 </WwiseDocument>

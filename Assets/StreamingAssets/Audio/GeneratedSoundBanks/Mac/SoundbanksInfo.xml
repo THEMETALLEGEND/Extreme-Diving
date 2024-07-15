@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
+	<RootPaths>
+		<ProjectRoot>../../../../../Extreme-Diving_WwiseProject</ProjectRoot>
+		<SourceFilesRoot>../../../../../Extreme-Diving_WwiseProject/.cache/Mac</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>../../../../../Extreme-Diving_WwiseProject/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{563598CA-4B2F-DD03-72FD-17C178A52DFA}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="393239870" Name="SFX"/>
+				<Bus Id="1069431850" Name="Player"/>
+				<Bus Id="1229948536" Name="Environment"/>
+				<Bus Id="2299321487" Name="Enemy"/>
+				<Bus Id="2607556080" Name="Menu"/>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3991942870" Name="Music"/>
+			</Busses>
+			<GameParameters>
+				<GameParameter Id="2744448096" Name="O2_Meter"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="2654748154" Name="Water">
+					<States>
+						<State Id="319258907" Name="Paused"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="1834394558" Name="Surface"/>
+						<State Id="2213237662" Name="Underwater"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="3991942870" Name="Music">
+					<States>
+						<State Id="89505537" Name="Gameplay"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2607556080" Name="Menu"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+			<SwitchGroups>
+				<SwitchGroup Id="681025064" Name="Depth">
+					<Switches>
+						<Switch Id="1834394558" Name="Surface"/>
+						<Switch Id="1976939195" Name="Deep"/>
+						<Switch Id="2943574119" Name="Shallow"/>
+						<Switch Id="4215188899" Name="Abyss"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{3BD2D277-B4D4-33C9-E520-6F2C72B2B4F0}">
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<Media>
+				<File Id="28182024" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Reload 1.wav</ShortName>
+					<CachePath>SFX/Reload 1_310B5A45.wem</CachePath>
+				</File>
+				<File Id="65861418" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Spell Hit.wav</ShortName>
+					<CachePath>SFX/Spell Hit_316F026B.wem</CachePath>
+				</File>
+				<File Id="197621370" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Coins.wav</ShortName>
+					<CachePath>SFX/Coins_B5F99166.wem</CachePath>
+				</File>
+				<File Id="260430760" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Slow Woosh.wav</ShortName>
+					<CachePath>SFX/Slow Woosh_3CDE5EE7.wem</CachePath>
+				</File>
+				<File Id="369084487" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Zoom Bomber.wav</ShortName>
+					<CachePath>SFX/Zoom Bomber_CE7D9B2E.wem</CachePath>
+				</File>
+				<File Id="475518339" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bubbles.wav</ShortName>
+					<CachePath>SFX/Bubbles_79AB78CA.wem</CachePath>
+				</File>
+				<File Id="534860940" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Slow Woosh.wav</ShortName>
+					<CachePath>SFX/Slow Woosh_818F3B66.wem</CachePath>
+				</File>
+				<File Id="545199776" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Reload 1.wav</ShortName>
+					<CachePath>SFX/Reload 1_11E15E67.wem</CachePath>
+				</File>
+				<File Id="565018162" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Splash.wav</ShortName>
+					<CachePath>SFX/Splash_31889CCC.wem</CachePath>
+				</File>
+				<File Id="624094111" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Fish Collect.wav</ShortName>
+					<CachePath>SFX/Fish Collect_3797D734.wem</CachePath>
+				</File>
+				<File Id="656771279" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Fish Collect.wav</ShortName>
+					<CachePath>SFX/Fish Collect_F8CB3FD6.wem</CachePath>
+				</File>
+				<File Id="696763621" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Coins_1.wav</ShortName>
+					<CachePath>SFX/Coins_1_169BCC7A.wem</CachePath>
+				</File>
+				<File Id="711590029" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Knife Scrape.wav</ShortName>
+					<CachePath>SFX/Knife Scrape_E5949CBE.wem</CachePath>
+				</File>
+				<File Id="796921303" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Splash.wav</ShortName>
+					<CachePath>SFX/Splash_5D93050C.wem</CachePath>
+				</File>
+				<File Id="805791028" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Fish Collect.wav</ShortName>
+					<CachePath>SFX/Fish Collect_2369EEB6.wem</CachePath>
+				</File>
+				<File Id="854889507" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Spatula scrape.wav</ShortName>
+					<CachePath>SFX/Spatula scrape_65FB24BD.wem</CachePath>
+				</File>
+				<File Id="1069922472" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Spatula scrape.wav</ShortName>
+					<CachePath>SFX/Spatula scrape_80F5602E.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="409964680" Name="Synth One" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="549295196" Name="RoomVerb (Custom)" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="763389728" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+				</Custom>
+				<ShareSets>
+					<Plugin Id="1008402193" Name="Low_Pass_20KHz" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="3128308983" Name="Gun_fattener" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
+			</Plugins>
+			<Events>
+				<Event Id="2791278421" Name="Attack_Pistol" DurationType="OneShot" DurationMin="0.2060649" DurationMax="0.2060649">
+					<MediaRefs>
+						<MediaRef Id="369084487"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4125161945" Name="Enter_Water" DurationType="Unknown">
+					<MediaRefs>
+						<MediaRef Id="565018162"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="409964680"/>
+						</Custom>
+					</PluginRefs>
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="2654748154" Id="2213237662" Name="Underwater"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="387843989" Name="Exit_Water" DurationType="OneShot" DurationMin="0.968709" DurationMax="1.088596">
+					<MediaRefs>
+						<MediaRef Id="796921303"/>
+					</MediaRefs>
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="2654748154" Id="1834394558" Name="Surface"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="1348106800" Name="Fish_Collect" DurationType="OneShot" DurationMin="0.09166667" DurationMax="0.1375">
+					<MediaRefs>
+						<MediaRef Id="624094111"/>
+						<MediaRef Id="656771279"/>
+						<MediaRef Id="805791028"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1699223174" Name="Fish_Swim" DurationType="OneShot" DurationMin="0.53841984" DurationMax="1">
+					<MediaRefs>
+						<MediaRef Id="475518339"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="763389728"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="3864097025" Name="Pause_All" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1068092414" Name="Player_Hurt" DurationType="OneShot" DurationMin="0.14966711" DurationMax="0.14966711">
+					<MediaRefs>
+						<MediaRef Id="65861418"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="549295196"/>
+						</Custom>
+						<ShareSets>
+							<PluginRef Id="1008402193"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="1650679582" Name="Player_Reload" DurationType="OneShot" DurationMin="0.78770685" DurationMax="0.78770685">
+					<MediaRefs>
+						<MediaRef Id="28182024"/>
+						<MediaRef Id="545199776"/>
+						<MediaRef Id="854889507"/>
+						<MediaRef Id="1069922472"/>
+					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="3128308983"/>
+						</ShareSets>
+					</PluginRefs>
+				</Event>
+				<Event Id="3809213376" Name="Purchase" DurationType="OneShot" DurationMin="0.27148333" DurationMax="0.28532457">
+					<MediaRefs>
+						<MediaRef Id="197621370"/>
+						<MediaRef Id="696763621"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3679762312" Name="Resume_All" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1677670675" Name="Shark_Attack" DurationType="OneShot" DurationMin="1.1101358" DurationMax="1.1101358">
+					<MediaRefs>
+						<MediaRef Id="534860940"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="790547833" Name="Swordfish_Attack" DurationType="OneShot" DurationMin="0.58530354" DurationMax="0.6201075">
+					<MediaRefs>
+						<MediaRef Id="260430760"/>
+						<MediaRef Id="711590029"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+			<StateGroups>
+				<StateGroup Id="2654748154" Name="Water">
+					<States>
+						<State Id="319258907" Name="Paused"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="1834394558" Name="Surface"/>
+						<State Id="2213237662" Name="Underwater"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="3991942870" Name="Music">
+					<States>
+						<State Id="89505537" Name="Gameplay"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2607556080" Name="Menu"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{FC18B4F2-E7D1-C2F7-3B51-7DC9CBBED838}</FileHash>
+</SoundBanksInfo>

@@ -1,0 +1,26 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	2654748154	Water			\Default Work Unit\Water	
+	3991942870	Music			\Default Work Unit\Music	
+
+State	ID	Name	State Group			Notes
+	319258907	Paused	Water			
+	748895195	None	Water			
+	1834394558	Surface	Water			
+	2213237662	Underwater	Water			
+	89505537	Gameplay	Music			
+	748895195	None	Music			
+	2607556080	Menu	Music			
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
+	1069431850	Player			\Default Work Unit\Master Audio Bus\SFX\Player	
+	1229948536	Environment			\Default Work Unit\Master Audio Bus\SFX\Environment	
+	2299321487	Enemy			\Default Work Unit\Master Audio Bus\SFX\Enemy	
+	2607556080	Menu			\Default Work Unit\Master Audio Bus\SFX\Menu	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
+
+Audio Devices	ID	Name	Type				Notes
+	2317455096	No_Output	No Output			
+	3859886410	System	System			
+

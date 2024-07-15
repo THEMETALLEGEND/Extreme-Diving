@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{869D6DC8-E5C2-4CA1-8894-B1FF355A33D0}" SchemaVersion="119">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{869D6DC8-E5C2-4CA1-8894-B1FF355A33D0}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{869D6DC8-E5C2-4CA1-8894-B1FF355A33D0}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="SFX Test" ID="{EF1A3C18-EE2C-410B-83B3-001DE5C4B285}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Enter_Water" ID="{8FAC7B0B-98BB-41C7-B2CE-F15CB7585066}" WorkUnitID="{73FF4E2C-BB94-452E-B6A9-F949EDD3B03E}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Swordfish_Attack" ID="{7A751A05-39AC-42E3-AFF2-4DF65069A8DD}" WorkUnitID="{73FF4E2C-BB94-452E-B6A9-F949EDD3B03E}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Exit_Water" ID="{B0FD7A04-593C-4E29-8DE0-5DE8204B9C60}" WorkUnitID="{73FF4E2C-BB94-452E-B6A9-F949EDD3B03E}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Shark_Attack" ID="{9ACF2D6E-6141-411C-86FF-2E53B5CD44AC}" WorkUnitID="{73FF4E2C-BB94-452E-B6A9-F949EDD3B03E}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Player_Hurt" ID="{FF26F652-D2C7-4CF3-B973-7D9E1E5A7527}" WorkUnitID="{73FF4E2C-BB94-452E-B6A9-F949EDD3B03E}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Attack_Pistol" ID="{B007A249-C14B-4904-B6A6-259290B84596}" WorkUnitID="{73FF4E2C-BB94-452E-B6A9-F949EDD3B03E}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Surface" ID="{8416AB7A-76BC-46FD-AF03-06BC8219835C}"/>
+						<CurrentStateRef Name="None" ID="{7188F8E2-D0DD-410D-82F4-12337F320D68}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Deep" ID="{6E231EE5-BCAB-49F3-B08F-19CA3DF3CDCF}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>
