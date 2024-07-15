@@ -6,12 +6,16 @@ public class PlayerDamageHandler : MonoBehaviour
 	public float bounceForce = 10f; // Сила отскока игрока
 	public float targetBounceDuration = 0.8f; // Длительность отскока
 	public float scatterForce = 5f; // Сила, с которой рыба разбрасывается вокруг
+	public float invincibilityDuration = 2f; // Длительность неуязвимости
+	public float blinkInterval = 0.2f; // Интервал мигания модели
 
 	public bool isDead = false;
+	private bool isInvincible = false;
 
 	private Rigidbody2D rb;
-	private PlayerMovement movementScript;
+	public PlayerMovement movementScript;
 	private PlayerInventory inventory;
+	private GameObject playerModel; // Рендерер модели игрока
 
 	public GameObject gameOverScreen;
 
@@ -21,11 +25,12 @@ public class PlayerDamageHandler : MonoBehaviour
 		movementScript = GetComponent<PlayerMovement>();
 		inventory = PlayerInventory.Instance;
 		gameOverScreen = FindInactiveObjectByName("Game Over Screen");
+		playerModel = transform.GetChild(0).gameObject; // Найти дочерний объект model и его рендерер
 	}
 
 	void OnCollisionEnter2D(Collision2D collision)
 	{
-		if (collision.gameObject.CompareTag("Enemy"))
+		if (collision.gameObject.CompareTag("Enemy") && !isInvincible)
 		{
 			if (IsInventoryEmpty())
 			{
@@ -53,13 +58,15 @@ public class PlayerDamageHandler : MonoBehaviour
 		movementScript.enabled = false;
 
 		if (!isDead)
+		{
 			StartCoroutine(SlowDownAndEnableMovement(false));
+			StartCoroutine(BecomeInvincible());
+		}
 		else
 		{
 			StartCoroutine(SlowDownAndEnableMovement(true));
 			Die();
 		}
-
 	}
 
 	IEnumerator SlowDownAndEnableMovement(bool isDead)
@@ -82,7 +89,22 @@ public class PlayerDamageHandler : MonoBehaviour
 
 		if (!isDead)
 			movementScript.enabled = true;
+	}
 
+	IEnumerator BecomeInvincible()
+	{
+		isInvincible = true;
+		float elapsedTime = 0f;
+
+		while (elapsedTime < invincibilityDuration)
+		{
+			playerModel.SetActive(!playerModel.activeSelf); // Переключаем видимость модели
+			yield return new WaitForSeconds(blinkInterval);
+			elapsedTime += blinkInterval;
+		}
+
+		playerModel.SetActive(true); // Убедиться, что модель видима в конце
+		isInvincible = false;
 	}
 
 	void ScatterFish()
@@ -136,8 +158,28 @@ public class PlayerDamageHandler : MonoBehaviour
 		// Здесь вы можете добавить логику для смерти игрока, например, проигрывание анимации смерти, перезапуск уровня и т.д.
 		Debug.Log("Player has died.");
 		gameOverScreen.SetActive(true);
+
 		// Пример перезапуска уровня:
 		// UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+	}
+
+	public void DestroyAllEnemies()
+	{
+		GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+		foreach (GameObject enemy in enemies)
+		{
+			Destroy(enemy);
+		}
+	}
+
+	public void SpawnAllFish()
+	{
+		GameObject[] spawners = GameObject.FindGameObjectsWithTag("Spawner");
+		foreach (GameObject spawner in spawners)
+		{
+			Spawner spawnerCode = spawner.GetComponent<Spawner>();
+			spawnerCode.SpawnFish();
+		}
 	}
 
 	private GameObject FindInactiveObjectByName(string objectName)

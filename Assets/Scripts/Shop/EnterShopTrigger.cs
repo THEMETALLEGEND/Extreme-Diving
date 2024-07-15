@@ -28,8 +28,6 @@ public class EnterShopTrigger : MonoBehaviour
 
 			if (!playerDamageHandler.isDead)
 				EnterShop();
-
-
 		}
 	}
 
@@ -55,5 +53,31 @@ public class EnterShopTrigger : MonoBehaviour
 
 		PlayerInventory playerInventory = GameObject.Find("PlayerInventory").GetComponent<PlayerInventory>();
 		playerInventory.SellFish();
+
+		// Call the method to destroy all enemies
+		DestroyAllEnemies();
+		ReactivateSpawners();
+	}
+
+	void DestroyAllEnemies()
+	{
+		GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+		foreach (GameObject enemy in enemies)
+		{
+			Destroy(enemy);
+		}
+	}
+
+	void ReactivateSpawners()
+	{
+		GameObject[] spawners = GameObject.FindGameObjectsWithTag("Spawner");
+		foreach (GameObject spawner in spawners)
+		{
+			Spawner spawnerCode;
+			if (spawner.TryGetComponent<Spawner>(out spawnerCode))
+			{
+				spawnerCode.hasSpawned = false;
+			}
+		}
 	}
 }

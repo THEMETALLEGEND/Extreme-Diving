@@ -53,4 +53,14 @@ public class ExitShopTrigger : MonoBehaviour
 
 		return null;
 	}
+
+	void SpawnAllFish()
+	{
+		GameObject[] spawners = GameObject.FindGameObjectsWithTag("Spawner");
+		foreach (GameObject spawner in spawners)
+		{
+			Spawner spawnerCode = spawner.GetComponent<Spawner>();
+			spawnerCode.SpawnFish();
+		}
+	}
 }

@@ -4,7 +4,6 @@ using UnityEngine.UI;
 public class RestartButton : MonoBehaviour
 {
 	private Button button;
-	private PlayerInventory playerInventory;
 
 	// Start is called before the first frame update
 	void Start()
@@ -20,14 +19,15 @@ public class RestartButton : MonoBehaviour
 	void OnButtonClick()
 	{
 		// Ищем объект инвентаря игрока
-		playerInventory = GameObject.Find("PlayerInventory").GetComponent<PlayerInventory>();
-		playerInventory.ReloadScene();
+		PlayerDamageHandler playerDamageHandler = GameObject.Find("Player").GetComponent<PlayerDamageHandler>();
+		playerDamageHandler.DestroyAllEnemies();
+		playerDamageHandler.movementScript.enabled = true;
+		playerDamageHandler.isDead = false;
 
-	}
+		GameObject player = GameObject.Find("Player");
+		player.transform.position = new Vector3(0, 0, 0);
 
-	// Update is called once per frame
-	void Update()
-	{
-
+		GameObject gameOverScreen = GameObject.Find("Game Over Screen");
+		gameOverScreen.SetActive(false);
 	}
 }
