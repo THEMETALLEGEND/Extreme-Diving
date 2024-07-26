@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3007694150272072775}
   - component: {fileID: 8427731413228386876}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Small Fish Spawner
   m_TagString: Spawner
   m_Icon: {fileID: 0}
@@ -129,4 +129,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85d8638eb3bd242f5b280030f811f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fish: {fileID: 5615312282670233463, guid: bfa92ad9e1aab4ddb9db6c204c107b70, type: 3}
+  fishTag: smallFish
+  hasSpawned: 0

@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 8455484409031149844}
   - component: {fileID: 8455484409031149843}
   - component: {fileID: 1195006725}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Smallest Fish Spawner
   m_TagString: Spawner
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85d8638eb3bd242f5b280030f811f2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fish: {fileID: 4582368322167373652, guid: 2bd6b997c6c9748a7bba6ccc02064522, type: 3}
+  fishTag: smallestFish
   hasSpawned: 0
 --- !u!61 &1195006725
 BoxCollider2D:
