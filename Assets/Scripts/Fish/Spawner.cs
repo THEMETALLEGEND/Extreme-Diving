@@ -6,6 +6,7 @@ public class Spawner : MonoBehaviour
 {
 	public GameObject fish;
 	public bool hasSpawned = false;
+	[HideInInspector] public GameObject spawnedFish;
 
 	// Start is called before the first frame update
 	void Start()
@@ -18,16 +19,32 @@ public class Spawner : MonoBehaviour
 	{
 		GameObject model = transform.GetChild(0).gameObject;
 		model.SetActive(false);
-		Instantiate(fish, transform.position, Quaternion.identity);
+		spawnedFish = Instantiate(fish, transform.position, Quaternion.identity);
 		hasSpawned = true;
+	}
+
+	public void DespawnFish()
+	{
+		Destroy(spawnedFish);
+		hasSpawned = false;
 	}
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
 		Debug.Log("Collided with " + other.gameObject);
-		if (other.tag == "Spawner")
+		if (other.tag == "Spawner" && !hasSpawned)
 		{
 			SpawnFish();
+		}
+		//else
+		//Debug.Log("collided with something else");
+	}
+
+	private void OnTriggerExit2D(Collider2D other)
+	{
+		if (other.tag == "Spawner" && hasSpawned)
+		{
+			DespawnFish();
 		}
 	}
 }
